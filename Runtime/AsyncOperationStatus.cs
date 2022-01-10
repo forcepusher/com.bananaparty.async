@@ -2,6 +2,9 @@ using System;
 
 namespace BananaParty.Async
 {
+    /// <remarks>
+    /// Default interface implementation for <see cref="IAsyncOperationStatus{TResult}"/>.
+    /// </remarks>
     public class AsyncOperationStatus<TResult> : IAsyncOperationStatus<TResult>
     {
         public bool Completed { get; private set; } = false;
@@ -32,5 +35,8 @@ namespace BananaParty.Async
         }
     }
 
+    /// <remarks>
+    /// Default interface implementation for <see cref="IAsyncOperationStatus"/>.
+    /// </remarks>
     public class AsyncOperationStatus : AsyncOperationStatus<bool> { }
 }
