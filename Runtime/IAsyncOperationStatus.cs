@@ -2,17 +2,19 @@
 {
     /// <summary>
     /// Interface for tracking execution status of an asynchronous operation.
+    /// Always assumes success on completion, cannot fail.
     /// </summary>
-    /// <typeparam name="TResult">Object and/or status returned by the operation.</typeparam>
-    public interface IAsyncOperationStatus<TResult>
+    public interface IAsyncOperationStatus
     {
         public bool Completed { get; }
-
-        public TResult Result { get; }
     }
 
     /// <summary>
-    /// <see cref="IAsyncOperationStatus{TResult}"/> where <see cref="{TResult}"/> is a <see cref="bool"/> that represents either success or failure.
+    /// Interface for tracking execution status of an asynchronous operation.
     /// </summary>
-    public interface IAsyncOperationStatus : IAsyncOperationStatus<bool> { }
+    /// <typeparam name="TResult">Object and/or status returned by the operation, like a boolean indicating Success or Failure.</typeparam>
+    public interface IAsyncOperationStatus<TResult> : IAsyncOperationStatus
+    {
+        public TResult Result { get; }
+    }
 }

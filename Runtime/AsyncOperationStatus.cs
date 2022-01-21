@@ -3,6 +3,22 @@ using System;
 namespace BananaParty.Async
 {
     /// <remarks>
+    /// Default interface implementation for <see cref="IAsyncOperationStatus"/>.
+    /// </remarks>
+    public class AsyncOperationStatus : IAsyncOperationStatus
+    {
+        public bool Completed { get; private set; } = false;
+
+        public void Complete()
+        {
+            if (Completed)
+                throw new InvalidOperationException($"Trying to call {nameof(Complete)} on {nameof(AsyncOperationStatus)} that is already completed.");
+
+            Completed = true;
+        }
+    }
+
+    /// <remarks>
     /// Default interface implementation for <see cref="IAsyncOperationStatus{TResult}"/>.
     /// </remarks>
     public class AsyncOperationStatus<TResult> : IAsyncOperationStatus<TResult>
@@ -34,9 +50,4 @@ namespace BananaParty.Async
             Completed = true;
         }
     }
-
-    /// <remarks>
-    /// Default interface implementation for <see cref="IAsyncOperationStatus"/>.
-    /// </remarks>
-    public class AsyncOperationStatus : AsyncOperationStatus<bool> { }
 }
