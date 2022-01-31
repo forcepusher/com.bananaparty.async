@@ -6,7 +6,7 @@
     /// </summary>
     public interface IAsyncOperationStatus
     {
-        public bool Completed { get; }
+        bool Completed { get; }
     }
 
     /// <summary>
@@ -15,6 +15,6 @@
     /// <typeparam name="TResult">Object and/or status returned by the operation, like a boolean indicating Success or Failure.</typeparam>
     public interface IAsyncOperationStatus<TResult> : IAsyncOperationStatus
     {
-        public TResult Result { get; }
+        TResult Result { get; }
     }
 }

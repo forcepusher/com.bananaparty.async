@@ -6,7 +6,7 @@
     /// <typeparam name="TProgress">Struct that contains loading progress info, usually a <see cref="float"/>.</typeparam>
     public interface IAsyncLoadingStatus<TProgress> : IAsyncOperationStatus where TProgress : struct
     {
-        public TProgress Progress { get; }
+        TProgress Progress { get; }
     }
 
     /// <summary>
@@ -16,6 +16,6 @@
     /// <typeparam name="TProgress">Struct that contains loading progress info, usually a <see cref="float"/>.</typeparam>
     public interface IAsyncLoadingStatus<TResult, TProgress> : IAsyncOperationStatus<TResult> where TProgress : struct
     {
-        public TProgress Progress { get; }
+        TProgress Progress { get; }
     }
 }
