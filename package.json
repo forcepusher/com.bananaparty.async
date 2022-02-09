@@ -1,6 +1,6 @@
 {
   "name": "com.bananaparty.async",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "type": "library",
   "displayName": "Async Library",
   "unity": "2021.2",
