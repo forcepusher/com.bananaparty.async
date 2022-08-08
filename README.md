@@ -20,5 +20,4 @@ All of these are not suitable for strict-OOP. They've copied the same mistake fr
 Relying on a static execution context is not okay no matter how you approach the thing in question.  
 I know it looks very convenient - but it's a trap. Those tools can only be used at a program entry point class.  
   
-## Work in progress.  
-Support us at https://www.patreon.com/bananaparty
+## Work in progress.
