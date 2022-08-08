@@ -1,4 +1,4 @@
-# com.bananaparty.async - Work in progress.  
+# com.bananaparty.async - Work in progress  
   
 Unity package. Fully cross-platform async library for strict-OOP.  
 In contrast to traditional language-specific patterns, it does not rely on a static execution context.  
