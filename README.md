@@ -1,4 +1,4 @@
-# com.bananaparty.async  
+# com.bananaparty.async - Work in progress.  
   
 Unity package. Fully cross-platform async library for strict-OOP.  
 In contrast to traditional language-specific patterns, it does not rely on a static execution context.  
@@ -18,6 +18,4 @@ All of these are not suitable for strict-OOP. They've copied the same mistake fr
 [JavaScript Promise EventLoop](https://javascript.info/event-loop#macrotasks-and-microtasks)  
 [Simula Process (Activate/Hold)](https://en.wikipedia.org/wiki/Simula#Simulation)  
 Relying on a static execution context is not okay no matter how you approach the thing in question.  
-I know it looks very convenient - but it's a trap. Those tools can only be used at a program entry point class.  
-  
-## Work in progress.
+I know it looks very convenient - but it's a trap. Those tools can only be used at a program entry point class.
