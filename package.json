@@ -4,5 +4,6 @@
   "type": "library",
   "displayName": "Async Library",
   "unity": "2021.2",
-  "description": "Asynchronous programming without relying on a static execution context."
+  "description": "Asynchronous programming without relying on a static execution context.",
+  "author": "github.com/forcepusher"
 }
